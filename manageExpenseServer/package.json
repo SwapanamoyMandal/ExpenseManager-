@@ -2,6 +2,9 @@
   "name": "manageexpenseserver",
   "module": "index.js",
   "type": "module",
+  "scripts": {
+    "start": "bun index.js"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
