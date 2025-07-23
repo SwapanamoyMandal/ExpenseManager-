@@ -61,24 +61,24 @@ const Expensetable = () => {
 
             {/* ✅ Responsive Table */}
             <div className="overflow-x-auto">
-              <table className="md:w-xl sm:w-lg w-sm text-gray-800">
+              <table className="md:w-xl sm:w-lg w-10 text-gray-800">
                 <thead>
-                  <tr className="bg-gray-100 text-gray-700 text-base md:text-base">
+                  <tr className="bg-gray-100 text-gray-700 text-sm md:text-base">
                     <th className="py-3 px-4 text-left">
                       <div className="flex items-center gap-2">
-                        <FiClock className="text-purple-500 text-lg" />
+                        <FiClock className="text-purple-500 text-base" />
                         <span>Time</span>
                       </div>
                     </th>
                     <th className="py-3 px-4 text-left">
                       <div className="flex items-center gap-2">
-                        <MdCategory className="text-green-500 text-lg" />
+                        <MdCategory className="text-green-500 text-base" />
                         <span>Category</span>
                       </div>
                     </th>
                     <th className="py-3 px-4 text-left">
                       <div className="flex items-center gap-2">
-                        <FaRupeeSign className="text-red-500 text-lg" />
+                        <FaRupeeSign className="text-red-500 text-base" />
                         <span>Amount</span>
                       </div>
                     </th>
@@ -88,7 +88,7 @@ const Expensetable = () => {
                   {dayExpenses.map((exp, idx) => (
                     <tr
                       key={idx}
-                      className="hover:bg-gradient-to-r from-purple-50 to-pink-50 transition-colors duration-300 border-b text-base font-semibold md:text-base"
+                      className="hover:bg-gradient-to-r from-purple-50 to-pink-50 transition-colors duration-300 border-b text-sm font-semibold md:text-base"
                     >
                       <td className="py-3 px-4">{formatTime(exp.date)}</td>
                       <td className="py-3 px-4">{exp.category}</td>
@@ -109,7 +109,7 @@ const Expensetable = () => {
                     </td>
                     <td className="py-3 px-4 text-red-700">
                       <div className="flex items-center gap-1">
-                          <FiMinus className="text-red-500 text-lg w-3 " />
+                          <FiMinus className="text-red-500 text-base w-3 " />
                           ₹{dayTotal}
                         </div>
                     </td>
