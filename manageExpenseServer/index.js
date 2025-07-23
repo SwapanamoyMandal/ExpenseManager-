@@ -13,7 +13,8 @@ connectDB();
 app.use(express.json());
 
 app.use(cors({
-  origin: process.env.FONTEND_URL || '*', // Fallback for local development
+  origin: process.env.FONTEND_URL,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 }));
 
