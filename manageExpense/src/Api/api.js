@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const backendServer = 'http://127.0.0.1:5555/expense'
+const backendServer = 'https://expensemanager-backend.onrender.com'
 
 axios.defaults.withCredentials = true;
 export const api = axios.create({
