@@ -1,6 +1,7 @@
 import React from 'react';
 import { useAppContext } from '../context/AppContext';
 import { AiOutlineCheckCircle } from 'react-icons/ai';
+import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { BiCategoryAlt } from 'react-icons/bi';
 import { FaRupeeSign } from 'react-icons/fa';
 import { HiOutlineCalendar } from 'react-icons/hi';
@@ -10,6 +11,7 @@ const AcknowlageBox = () => {
   const {setOpenacknowlagebox, savedata} = useAppContext();
   
   const formatTime = (dateString) => {
+    if (!dateString) return "N/A";
     const date = new Date(dateString);
     return date.toLocaleString("en-US", {
       hour: "numeric",
@@ -39,16 +41,16 @@ const AcknowlageBox = () => {
         <div className="bg-gray-100 rounded-xl p-4 text-left mb-4 space-y-2">
           <h2 className="flex items-center text-gray-700 text-lg sm:text-xl font-medium">
             <FaRupeeSign className="mr-2 text-green-600" /> 
-            Amount: <span className="ml-1 font-semibold">{savedata.amount}</span>
+            Amount: <span className="ml-1 font-semibold">{savedata?.amount || "N/A"}</span>
           </h2>
           <h2 className="flex items-center text-gray-700 text-lg sm:text-xl font-medium">
             <BiCategoryAlt className="mr-2 text-blue-500" /> 
-            Category: <span className="ml-1 font-medium">{savedata.category}</span>
+            Category: <span className="ml-1 font-medium">{savedata?.category || "N/A"}</span>
           </h2>
 
           <h2 className="flex items-center text-gray-700 text-base sm:text-lg font-medium">
             <IoMdTime className="mr-2 text-orange-500" /> 
-            Time: <span className="ml-1">{formatTime(savedata.date)}</span>
+            Time: <span className="ml-1">{formatTime(savedata?.date || "N/A")}</span>
           </h2>
         </div>
 
