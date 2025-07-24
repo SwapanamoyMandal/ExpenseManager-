@@ -8,7 +8,16 @@ import { IoMdTime } from 'react-icons/io';
 
 const AcknowlageBox = () => {
   const {setOpenacknowlagebox, savedata} = useAppContext();
-
+  
+  const formatTime = (dateString) => {
+    const date = new Date(dateString);
+    return date.toLocaleString("en-US", {
+      hour: "numeric",
+      minute: "numeric",
+      hour12: true,
+      });
+    };
+  
   return (
     <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
       <div className="bg-white rounded-2xl shadow-xl p-6 sm:w-[90%] w-[80%] max-w-md text-center">
@@ -34,12 +43,12 @@ const AcknowlageBox = () => {
           </h2>
           <h2 className="flex items-center text-gray-700 text-lg sm:text-xl font-medium">
             <BiCategoryAlt className="mr-2 text-blue-500" /> 
-            Category: <span className="ml-1 font-semibold">{savedata.category}</span>
+            Category: <span className="ml-1 font-medium">{savedata.category}</span>
           </h2>
 
           <h2 className="flex items-center text-gray-700 text-base sm:text-lg font-medium">
             <IoMdTime className="mr-2 text-orange-500" /> 
-            Time: <span className="ml-1">{savedata.date}</span>
+            Time: <span className="ml-1">{formatTime(savedata.date)}</span>
           </h2>
         </div>
 
