@@ -61,7 +61,7 @@ const Expensetable = () => {
 
             {/* ✅ Responsive Table */}
             <div className="overflow-x-auto">
-              <table className="md:w-xl sm:w-lg w-10 text-gray-800">
+              <table className="md:w-xl sm:w-lg w-30 text-gray-800">
                 <thead>
                   <tr className="bg-gray-100 text-gray-700 text-sm md:text-base">
                     <th className="py-3 px-4 text-left">
