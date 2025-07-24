@@ -43,43 +43,43 @@ const DropdownMenu = () => {
             className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
             onClick={() => handleSelect("Food & Beverages")}
           >
-            Food & Beverages
+            Food & Beverages 🍔
           </li>
           <li
             className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
             onClick={() => handleSelect("Travel")}
           >
-            Travel
+            Travel 🚌
           </li>
           <li
             className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
             onClick={() => handleSelect("Fitness & Health")}
             >
-            Fitness & Health
+            Fitness & Health 💪
           </li>
           <li
             className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
             onClick={() => handleSelect("Fashion & Cloths")}
           >
-            Fashion & Cloths
+            Fashion & Cloths 🛍️
           </li>
           <li
             className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
             onClick={() => handleSelect("Tech & Gadgets")}
           >
-            Tech & Gadgets
+            Tech & Gadgets 💻
           </li>
           <li
             className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
             onClick={() => handleSelect("Subscriptions")}
           >
-            Subscriptions 
+            Subscriptions 🗓️
           </li>
           <li
             className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
             onClick={() => handleSelect("Other")}
           >
-            Other
+            Other 🤌
           </li>
         </ul>
       </div>
