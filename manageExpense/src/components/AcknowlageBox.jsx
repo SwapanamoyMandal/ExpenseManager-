@@ -8,7 +8,14 @@ import { HiOutlineCalendar } from 'react-icons/hi';
 import { IoMdTime } from 'react-icons/io';
 
 const AcknowlageBox = () => {
-  const {setOpenacknowlagebox, savedata} = useAppContext();
+  
+  const {setOpenacknowlagebox, savedata,setAmount,setSelected} = useAppContext();
+
+  const handelClick = ()=>{
+     setOpenacknowlagebox(false)
+     setAmount("")
+     setSelected("Expense Type")
+  }
   
   const formatTime = (dateString) => {
     if (!dateString) return "N/A";
@@ -56,7 +63,7 @@ const AcknowlageBox = () => {
 
         {/* Button */}
         <button
-          onClick={() => setOpenacknowlagebox(false)}
+          onClick={() => handelClick()}
           className="w-full bg-primary/90 text-white font-semibold py-3 rounded-xl hover:bg-primary transition-all"
         >
           OK
