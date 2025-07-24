@@ -40,16 +40,16 @@ const AcknowlageBox = () => {
         {/* Details */}
         <div className="bg-gray-100 rounded-xl p-4 text-left mb-4 space-y-2">
           <h2 className="flex items-center text-gray-700 text-lg sm:text-xl font-medium">
-            <FaRupeeSign className="mr-2 text-green-600" /> 
+            <FaRupeeSign className="mr-2 text-red-600" /> 
             Amount: <span className="ml-1 font-semibold">{savedata?.amount || "N/A"}</span>
           </h2>
           <h2 className="flex items-center text-gray-700 text-lg sm:text-xl font-medium">
-            <BiCategoryAlt className="mr-2 text-blue-500" /> 
+            <BiCategoryAlt className="mr-2 text-green-500" /> 
             Category: <span className="ml-1 font-medium">{savedata?.category || "N/A"}</span>
           </h2>
 
           <h2 className="flex items-center text-gray-700 text-base sm:text-lg font-medium">
-            <IoMdTime className="mr-2 text-orange-500" /> 
+            <IoMdTime className="mr-2 text-purple-500" /> 
             Time: <span className="ml-1">{formatTime(savedata?.date || "N/A")}</span>
           </h2>
         </div>
